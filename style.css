@@ -1,0 +1,702 @@
+/* ==========================================
+   MASHAL AHMAD PORTFOLIO
+   DARK SPACE + CYAN AESTHETIC
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 70% 20%,
+            #08213a 0%,
+            #020b18 35%,
+            #010611 70%,
+            #00030a 100%
+        );
+
+    color: white;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* ==========================================
+   BACKGROUND
+========================================== */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(0, 183, 255, 0.06),
+            transparent 25%
+        );
+
+    z-index: -3;
+}
+
+
+/* ==========================================
+   STARS
+========================================== */
+
+.stars {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+.stars span {
+    position: absolute;
+
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: #29bfff;
+
+    box-shadow:
+        0 0 8px #29bfff;
+
+    opacity: 0.5;
+
+    animation: twinkle 3s infinite alternate;
+}
+
+.stars span:nth-child(1) {
+    top: 10%;
+    left: 8%;
+}
+
+.stars span:nth-child(2) {
+    top: 20%;
+    left: 25%;
+}
+
+.stars span:nth-child(3) {
+    top: 8%;
+    left: 48%;
+}
+
+.stars span:nth-child(4) {
+    top: 35%;
+    left: 15%;
+}
+
+.stars span:nth-child(5) {
+    top: 45%;
+    left: 44%;
+}
+
+.stars span:nth-child(6) {
+    top: 55%;
+    left: 75%;
+}
+
+.stars span:nth-child(7) {
+    top: 70%;
+    left: 25%;
+}
+
+.stars span:nth-child(8) {
+    top: 80%;
+    left: 60%;
+}
+
+.stars span:nth-child(9) {
+    top: 65%;
+    left: 90%;
+}
+
+.stars span:nth-child(10) {
+    top: 90%;
+    left: 12%;
+}
+
+.stars span:nth-child(11) {
+    top: 28%;
+    left: 85%;
+}
+
+.stars span:nth-child(12) {
+    top: 15%;
+    left: 95%;
+}
+
+@keyframes twinkle {
+
+    from {
+        opacity: 0.15;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 0.8;
+        transform: scale(1.4);
+    }
+}
+
+
+/* ==========================================
+   WELCOME
+========================================== */
+
+.welcome {
+    text-align: center;
+
+    padding-top: 28px;
+
+    font-size: 28px;
+
+    font-weight: 800;
+
+    letter-spacing: 7px;
+
+    color: #58d5ff;
+
+    text-shadow:
+        0 0 8px #1fbfff,
+        0 0 20px rgba(31, 191, 255, 0.7),
+        0 0 40px rgba(31, 191, 255, 0.35);
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+    min-height: 620px;
+
+    max-width: 1180px;
+
+    margin: auto;
+
+    padding:
+        55px 30px 100px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 70px;
+}
+
+
+/* ==========================================
+   HERO CONTENT
+========================================== */
+
+.hero-content {
+    flex: 1;
+
+    max-width: 700px;
+}
+
+.hello {
+    color: #36c8ff;
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 7vw, 78px);
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+
+    font-weight: 800;
+
+    color: #f5f7fa;
+}
+
+.hero h1 span {
+    color: #35bdf5;
+
+    text-shadow:
+        0 0 10px rgba(35, 190, 255, 0.6),
+        0 0 30px rgba(35, 190, 255, 0.3);
+}
+
+.description {
+    max-width: 650px;
+
+    color: #a9b9ca;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    margin-bottom: 28px;
+}
+
+
+/* ==========================================
+   ROLE BADGE
+========================================== */
+
+.role {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    border-radius: 30px;
+
+    border: 1px solid #087baa;
+
+    background:
+        rgba(5, 40, 62, 0.45);
+
+    color: #40ccff;
+
+    font-size: 13px;
+
+    box-shadow:
+        0 0 20px rgba(0, 183, 255, 0.08);
+
+    backdrop-filter: blur(5px);
+}
+
+.role b {
+    color: #ffffff;
+
+    margin: 0 7px;
+}
+
+
+/* ==========================================
+   PHOTO AREA
+========================================== */
+
+.photo-area {
+    position: relative;
+
+    width: 330px;
+    height: 430px;
+
+    flex-shrink: 0;
+}
+
+
+/* Cyan tilted border */
+
+.photo-border {
+    position: absolute;
+
+    width: 330px;
+    height: 405px;
+
+    top: 30px;
+    left: 5px;
+
+    border: 3px solid #13b9f7;
+
+    border-radius: 24px;
+
+    transform: rotate(6deg);
+
+    box-shadow:
+        0 0 12px #00bfff,
+        0 0 35px rgba(0, 183, 255, 0.45);
+
+    z-index: 0;
+}
+
+
+/* Photo */
+
+.photo-box {
+    position: absolute;
+
+    width: 330px;
+    height: 405px;
+
+    top: 0;
+    left: 0;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    border: 2px solid #163a50;
+
+    background: #071421;
+
+    z-index: 2;
+
+    box-shadow:
+        0 0 30px rgba(0, 174, 255, 0.2);
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ==========================================
+   GENERAL SECTIONS
+========================================== */
+
+.skills-section,
+.about-section,
+.contact-section {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 100px 30px;
+
+    text-align: center;
+}
+
+.section-label {
+    color: #26bfff;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+}
+
+.skills-section h2,
+.about-section h2,
+.contact-section h2 {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+.line {
+    width: 60px;
+
+    height: 2px;
+
+    background: #24bdff;
+
+    margin: 0 auto 45px;
+
+    box-shadow:
+        0 0 12px #24bdff;
+}
+
+
+/* ==========================================
+   SKILLS
+========================================== */
+
+.skills {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.skill {
+    padding: 30px;
+
+    text-align: left;
+
+    background:
+        rgba(5, 20, 34, 0.7);
+
+    border: 1px solid #15344a;
+
+    border-radius: 14px;
+
+    transition: 0.3s;
+
+    backdrop-filter: blur(8px);
+}
+
+.skill:hover {
+    transform: translateY(-7px);
+
+    border-color: #16bfff;
+
+    box-shadow:
+        0 0 25px rgba(0, 183, 255, 0.12);
+}
+
+.skill span {
+    color: #168bb9;
+
+    font-size: 12px;
+}
+
+.skill h3 {
+    color: #48caff;
+
+    font-size: 25px;
+
+    margin: 15px 0 7px;
+}
+
+.skill p {
+    color: #8095a8;
+
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   ABOUT
+========================================== */
+
+.about-box {
+    max-width: 780px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    background:
+        rgba(5, 20, 34, 0.7);
+
+    border: 1px solid #15344a;
+
+    border-radius: 16px;
+
+    line-height: 1.9;
+}
+
+.about-box p {
+    color: #a8b7c5;
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+}
+
+.about-box p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==========================================
+   CONTACT
+========================================== */
+
+.contact {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.contact-card {
+    padding: 30px 20px;
+
+    text-decoration: none;
+
+    background:
+        rgba(5, 20, 34, 0.7);
+
+    border: 1px solid #15344a;
+
+    border-radius: 14px;
+
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #17bfff;
+
+    box-shadow:
+        0 0 25px rgba(0, 183, 255, 0.12);
+}
+
+.contact-card span {
+    display: block;
+
+    color: #1599cb;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+.contact-card strong {
+    color: #d8e5ef;
+
+    font-size: 14px;
+
+    font-weight: normal;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+    text-align: center;
+
+    padding: 40px 20px;
+
+    border-top: 1px solid #102536;
+
+    color: #5e7486;
+}
+
+.logo {
+    width: 45px;
+    height: 45px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid #168dbb;
+
+    border-radius: 50%;
+
+    color: #36c8ff;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 0 15px rgba(0, 183, 255, 0.15);
+}
+
+footer p {
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 850px) {
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding-top: 60px;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .photo-area {
+        margin-top: 20px;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .welcome {
+        font-size: 20px;
+
+        letter-spacing: 4px;
+    }
+
+    .hero {
+        padding:
+            50px 20px 80px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .intro-text {
+        font-size: 15px;
+    }
+
+    .photo-area,
+    .photo-box,
+    .photo-border {
+        width: 280px;
+    }
+
+    .photo-area,
+    .photo-box {
+        height: 350px;
+    }
+
+    .photo-border {
+        height: 350px;
+    }
+
+    .skills-section,
+    .about-section,
+    .contact-section {
+        padding:
+            70px 20px;
+    }
+
+    .skills-section h2,
+    .about-section h2,
+    .contact-section h2 {
+        font-size: 36px;
+    }
+}
